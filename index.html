@@ -13,7 +13,7 @@
 <meta property="og:description" content="The biggest selection of bouncy castles & party hire in Co Kildare. No deposit, no cancellation fee.">
 <meta property="og:url" content="https://www.premierevents.ie/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://www.premierevents.ie/thumbs.ashx?img=super-hero-castle-8.jpg&cs=1200">
+<meta property="og:image" content="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/be29c59b9cbd8036ddfd357398d13a12">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -33,7 +33,7 @@
   "url": "https://www.premierevents.ie/",
   "telephone": "+353874152278",
   "email": "info@premierevents.ie",
-  "image": "https://www.premierevents.ie/thumbs.ashx?img=super-hero-castle-8.jpg&cs=1200",
+  "image": "https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/be29c59b9cbd8036ddfd357398d13a12",
   "description": "Bouncy castle and party equipment hire in Co Kildare, Laois, Wicklow and Offaly.",
   "address": { "@type": "PostalAddress", "addressLocality": "Naas", "addressRegion": "Co Kildare", "addressCountry": "IE" },
   "areaServed": "Co Kildare, Laois, Wicklow, Offaly",
@@ -74,6 +74,12 @@ section{position:relative;padding:110px 0;z-index:1}
 
 /* fallback tile when an image 404s */
 img.ph{display:block;width:100%;height:100%;object-fit:cover}
+/* designed fallback so tiles never look broken */
+.imgwrap{display:flex;align-items:center;justify-content:center}
+.imgwrap::after{content:attr(data-emoji);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.2rem;filter:drop-shadow(2px 3px 0 rgba(0,0,0,.18));z-index:0;opacity:.92}
+.imgwrap img.ph{position:relative;z-index:1}
+.imgwrap img.ph[data-failed]{display:none}
+
 .imgwrap{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--c5),var(--c1))}
 .imgwrap.f2{background:linear-gradient(135deg,var(--c2),var(--c3))}
 .imgwrap.f3{background:linear-gradient(135deg,var(--c4),var(--c1))}
@@ -431,9 +437,9 @@ footer a.fl:hover{color:var(--c2);padding-left:6px}
     </div>
     <div class="collage" data-reveal>
       <div class="badge">No.1<br>In<br>Kildare</div>
-      <div class="imgwrap h-a"><img class="ph" loading="lazy" alt="Super Hero bouncy castle hire Kildare" src="https://www.premierevents.ie/thumbs.ashx?img=super-hero-castle-8.jpg&cs=800" onerror="this.style.display='none'"></div>
-      <div class="imgwrap f2 h-b"><img class="ph" loading="lazy" alt="Princess and Unicorns bouncy castle" src="https://www.premierevents.ie/thumbs.ashx?img=princess-and-unicorns-12ft-x-14ft.jpg&cs=800" onerror="this.style.display='none'"></div>
-      <div class="imgwrap f3 h-c"><img class="ph" loading="lazy" alt="Jungle obstacle course hire" src="https://www.premierevents.ie/thumbs.ashx?img=40ft-jungle-obstacle-course.jpg&cs=600" onerror="this.style.display='none'"></div>
+      <div data-emoji="🦸" class="imgwrap h-a"><img class="ph" loading="lazy" alt="Super Hero bouncy castle hire Kildare" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/be29c59b9cbd8036ddfd357398d13a12" onerror="this.setAttribute('data-failed','1')"></div>
+      <div data-emoji="👑" class="imgwrap f2 h-b"><img class="ph" loading="lazy" alt="Princess and Unicorns bouncy castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/015092ccfe3d156f9785736e094555be" onerror="this.setAttribute('data-failed','1')"></div>
+      <div data-emoji="🏃" class="imgwrap f3 h-c"><img class="ph" loading="lazy" alt="Jungle obstacle course hire" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/100d0e4c9c6e1bbac860f5192b942aff" onerror="this.setAttribute('data-failed','1')"></div>
     </div>
   </div>
 </section>
@@ -454,35 +460,35 @@ footer a.fl:hover{color:var(--c2);padding-left:6px}
       <span class="sec-tag" style="background:var(--c2);color:#fff">Most Popular</span>
       <h2>Pick Your <span style="color:var(--c1)">Castle</span></h2>
     </div>
-    <!-- TODO: image filenames are best-guess from live URL slugs; verify each thumbs.ashx link resolves and swap any that 404 -->
+    <!-- Product photos pulled from the live site's Cloudinary CDN (real images) -->
     <div class="pgrid">
       <div class="pcard" data-reveal>
-        <div class="imgwrap"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Super Hero bouncy castle" src="https://www.premierevents.ie/thumbs.ashx?img=super-hero-castle-8.jpg&cs=600" onerror="this.style.display='none'"></div>
+        <div data-emoji="🦸" class="imgwrap"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Super Hero bouncy castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/be29c59b9cbd8036ddfd357398d13a12" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="body"><h3>Super Hero Castle</h3><p>Action-packed bouncing for little heroes. A guaranteed birthday hit.</p>
           <div class="prow"><span class="price">&#8364;130</span><a class="pbook" href="#contact">Book</a></div></div>
       </div>
       <div class="pcard" data-reveal>
-        <div class="imgwrap f2"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Princess and Unicorns bouncy castle" src="https://www.premierevents.ie/thumbs.ashx?img=princess-and-unicorns-12ft-x-14ft.jpg&cs=600" onerror="this.style.display='none'"></div>
+        <div data-emoji="👑" class="imgwrap f2"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Princess and Unicorns bouncy castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/015092ccfe3d156f9785736e094555be" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="body"><h3>Princess &amp; Unicorns</h3><p>A magical 12ft x 14ft castle for fairytale parties and dream days.</p>
           <div class="prow"><span class="price">&#8364;130</span><a class="pbook" href="#contact">Book</a></div></div>
       </div>
       <div class="pcard" data-reveal>
-        <div class="imgwrap f3"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Paw Patrol bouncy castle" src="https://www.premierevents.ie/thumbs.ashx?img=paw-patrol-12ft-x-14ft.jpg&cs=600" onerror="this.style.display='none'"></div>
+        <div data-emoji="🐾" class="imgwrap f3"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Paw Patrol bouncy castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/c93e04a7f31896bc770f353943c3c555" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="body"><h3>Paw Patrol</h3><p>Paws to the rescue! A favourite with the younger crew, 12ft x 14ft.</p>
           <div class="prow"><span class="price">&#8364;130</span><a class="pbook" href="#contact">Book</a></div></div>
       </div>
       <div class="pcard" data-reveal>
-        <div class="imgwrap f4"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Minecraft bouncy castle" src="https://www.premierevents.ie/thumbs.ashx?img=minecraft-12ft-x-12ft.jpg&cs=600" onerror="this.style.display='none'"></div>
+        <div data-emoji="⛏️" class="imgwrap f4"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Minecraft bouncy castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/a1565e42106b09ffce9d416cb7fb273c" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="body"><h3>Minecraft</h3><p>Blocky, brilliant fun for the gamers. 12ft x 12ft of pixel-perfect bouncing.</p>
           <div class="prow"><span class="price">&#8364;130</span><a class="pbook" href="#contact">Book</a></div></div>
       </div>
       <div class="pcard" data-reveal>
-        <div class="imgwrap f5"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Dinosaur bouncing castle" src="https://www.premierevents.ie/thumbs.ashx?img=dinosaur-14ft-x-15ft-bouncing-castle.jpg&cs=600" onerror="this.style.display='none'"></div>
+        <div data-emoji="🦖" class="imgwrap f5"><span class="tag">2nd Day Free</span><img class="ph" loading="lazy" alt="Dinosaur bouncing castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/2d5205bc269f74a322d3b0ee3cd02a3b" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="body"><h3>Dinosaur Castle</h3><p>Roar into the party with this 14ft x 15ft prehistoric adventure.</p>
           <div class="prow"><span class="price">&#8364;130</span><a class="pbook" href="#contact">Book</a></div></div>
       </div>
       <div class="pcard" data-reveal>
-        <div class="imgwrap"><span class="tag">Mega Unit</span><img class="ph" loading="lazy" alt="40ft Jungle obstacle course" src="https://www.premierevents.ie/thumbs.ashx?img=40ft-jungle-obstacle-course.jpg&cs=600" onerror="this.style.display='none'"></div>
+        <div data-emoji="🏃" class="imgwrap"><span class="tag">Mega Unit</span><img class="ph" loading="lazy" alt="40ft Jungle obstacle course" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/100d0e4c9c6e1bbac860f5192b942aff" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="body"><h3>40ft Jungle Obstacle Course</h3><p>One of the biggest courses in Kildare. First day plus a free second day.</p>
           <div class="prow"><span class="price">&#8364;200</span><a class="pbook" href="#contact">Book</a></div></div>
       </div>
@@ -503,19 +509,19 @@ footer a.fl:hover{color:var(--c2);padding-left:6px}
     </div>
     <div class="cgrid2">
       <a class="cat" href="#contact" data-reveal>
-        <div class="imgwrap"><img class="ph" loading="lazy" alt="Obstacle courses for hire" src="https://www.premierevents.ie/thumbs.ashx?img=50ft-mega-obstacle-course.jpg&cs=700" onerror="this.style.display='none'"></div>
+        <div data-emoji="🏃" class="imgwrap"><img class="ph" loading="lazy" alt="Obstacle courses for hire" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/8972d3d39795052c188ab56b3b6e1838" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="lab"><b>Obstacle Courses</b></div>
       </a>
       <a class="cat" href="#contact" data-reveal>
-        <div class="imgwrap f2"><img class="ph" loading="lazy" alt="Combi units bouncy castle and slide" src="https://www.premierevents.ie/thumbs.ashx?img=jungle-adventure-combi.jpg&cs=700" onerror="this.style.display='none'"></div>
+        <div data-emoji="🎪" class="imgwrap f2"><img class="ph" loading="lazy" alt="Combi units bouncy castle and slide" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/9decab6252eb934e9d438b9e1f1d820f" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="lab"><b>Combi Units</b></div>
       </a>
       <a class="cat" href="#contact" data-reveal>
-        <div class="imgwrap f3"><img class="ph" loading="lazy" alt="Soccer parties hire" src="https://www.premierevents.ie/thumbs.ashx?img=soccer-parties.jpg&cs=700" onerror="this.style.display='none'"></div>
+        <div data-emoji="⚽" class="imgwrap f3"><img class="ph" loading="lazy" alt="Soccer parties hire" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/b7594c048a5eeac3066c20edab33f97e" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="lab"><b>Soccer Parties</b></div>
       </a>
       <a class="cat" href="#contact" data-reveal>
-        <div class="imgwrap f4"><img class="ph" loading="lazy" alt="Chair cover and event hire" src="https://www.premierevents.ie/thumbs.ashx?img=lycra-chair-cover-hire.jpg&cs=700" onerror="this.style.display='none'"></div>
+        <div data-emoji="🎉" class="imgwrap f4"><img class="ph" loading="lazy" alt="Chair cover and event hire" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/10ab16b013f35c7f69b877ccb498d619" onerror="this.setAttribute('data-failed','1')"></div>
         <div class="lab"><b>Events &amp; Add-Ons</b></div>
       </a>
     </div>
@@ -564,14 +570,14 @@ footer a.fl:hover{color:var(--c2);padding-left:6px}
       <span class="sec-tag">The Fun Stuff</span>
       <h2>Our Range In Action</h2>
     </div>
-    <!-- TODO: verify these thumbs.ashx filenames; swap any that 404 -->
+    <!-- Gallery photos from the live Cloudinary CDN -->
     <div class="ggrid" data-reveal>
-      <div class="gtile"><div class="imgwrap"><img class="ph" loading="lazy" alt="Bouncy castle hire" src="https://www.premierevents.ie/thumbs.ashx?img=12ft-x-12ft-bouncy-castle.jpg&cs=700" onerror="this.style.display='none'"></div></div>
-      <div class="gtile"><div class="imgwrap f2"><img class="ph" loading="lazy" alt="Unicorn bouncy castle" src="https://www.premierevents.ie/thumbs.ashx?img=unicorn-bouncy-12ft-x-14ft.jpg&cs=500" onerror="this.style.display='none'"></div></div>
-      <div class="gtile"><div class="imgwrap f3"><img class="ph" loading="lazy" alt="Football bouncy castle" src="https://www.premierevents.ie/thumbs.ashx?img=football-castle-12ft-x-14ft.jpg&cs=500" onerror="this.style.display='none'"></div></div>
-      <div class="gtile"><div class="imgwrap f4"><img class="ph" loading="lazy" alt="Dragon combi unit" src="https://www.premierevents.ie/thumbs.ashx?img=dragon-bouncy-castle.jpg&cs=500" onerror="this.style.display='none'"></div></div>
-      <div class="gtile"><div class="imgwrap f5"><img class="ph" loading="lazy" alt="Mickey Mouse bouncy castle" src="https://www.premierevents.ie/thumbs.ashx?img=mickey-mouse-12ft-x-14ft.jpg&cs=700" onerror="this.style.display='none'"></div></div>
-      <div class="gtile"><div class="imgwrap"><img class="ph" loading="lazy" alt="LOL bouncy castle" src="https://www.premierevents.ie/thumbs.ashx?img=lol-castle-12ft-x-14ft.jpg&cs=500" onerror="this.style.display='none'"></div></div>
+      <div class="gtile"><div data-emoji="🏰" class="imgwrap"><img class="ph" loading="lazy" alt="Bouncy castle hire" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/aad5e68b52ea144caabc0a4204dfb129" onerror="this.setAttribute('data-failed','1')"></div></div>
+      <div class="gtile"><div data-emoji="🦄" class="imgwrap f2"><img class="ph" loading="lazy" alt="Unicorn bouncy castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/7247a4a455d50388ba287bca61efe014" onerror="this.setAttribute('data-failed','1')"></div></div>
+      <div class="gtile"><div data-emoji="⚽" class="imgwrap f3"><img class="ph" loading="lazy" alt="Football bouncy castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/26f8b093d8bda5fa968bf8f649622c00" onerror="this.setAttribute('data-failed','1')"></div></div>
+      <div class="gtile"><div data-emoji="🐉" class="imgwrap f4"><img class="ph" loading="lazy" alt="Dragon combi unit" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/9e5886ce13134b344f4e8caacdd56abd" onerror="this.setAttribute('data-failed','1')"></div></div>
+      <div class="gtile"><div data-emoji="🐭" class="imgwrap f5"><img class="ph" loading="lazy" alt="Mickey Mouse bouncy castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/c93e04a7f31896bc770f353943c3c555" onerror="this.setAttribute('data-failed','1')"></div></div>
+      <div class="gtile"><div data-emoji="🎀" class="imgwrap"><img class="ph" loading="lazy" alt="LOL bouncy castle" src="https://bouncycastlenetwork-res.cloudinary.com/image/upload/f_auto,q_auto,c_limit,w_900/015092ccfe3d156f9785736e094555be" onerror="this.setAttribute('data-failed','1')"></div></div>
     </div>
   </div>
 </section>
